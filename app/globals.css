@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 240 19% 16%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 19% 16%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+      --primary: 221.2 83.2% 53.3%; /*This was the color blue theme*/
+      --primary-foreground: 300 0% 100%;
+      --secondary: 240 19% 16%;
+      --secondary-foreground: 300 0% 100%;
+      --tertiary: 27 82% 98%;
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 237 13% 40%;
+      --accent: 237 9% 96%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 8 82% 92%;
+      --input: 8 82% 92%;
+      --ring: 9 99% 67%;
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 237 22% 20%;
+      --foreground: 210 40% 98%;
+      --card: 240% 19% 16%;
+      --card-foreground: 300 0% 100%;
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+      --primary: 217.2 91.2% 59.8%;
+      --primary-foreground: 300 0% 100%;
+      --secondary: 240 19% 16%;
+      --secondary-foreground: 300 0% 100%;
+      --tertiary: 237 22% 20%;
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 237 13% 63%;
+      --accent: 240% 19% 16%; /*current edit*/
+      --accent-foreground: 300 0% 100%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 237 22% 23%;
+      --input: 237 22% 23%;
+      --ring: 224.3 76.3% 48%;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.h1 {
+  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+}
+
+.h2 {
+  @apply text-4xl font-bold;
+}
+
+.h3 {
+  @apply text-3xl font-bold;
+}
+
+.h4 {
+  @apply text-[22px] font-semibold;
+}
+
+.subtitle {
+  @apply text-muted-foreground text-lg mb-8 font-light;
+}
+
+.section-title {
+  @apply text-4xl font-bold relative w-max flex items-center justify-between 
+  gap-x-3 before:bg-dots_light before:dark:bg-dots_dark before:bg-no-repeat before:bg-center
+  before:w-[24px] before:h-[24px];
+}
+
+.badge {
+  @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl 
+  p-4 rounded-[10px] flex items-center gap-x-4;
+}
+
+/* Swipper bullets styles */
+
+.swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  @apply bg-primary;
+}
