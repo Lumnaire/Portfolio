@@ -11,7 +11,7 @@ const Footer = () => {
             iconsStyles="text-primary text-[20px] dark:text-white/70 text-[20px] hover:text-white dark:hover:text-primary"
           />
           {/* {Copyright} */}
-          <div className="text-muted-foreground">
+          <div className="text-muted-foreground text-[12px]">
             Copyright &copy; Ronald Castromero. All Rights Reserved.
           </div>
         </div>
