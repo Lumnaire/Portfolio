@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
           {project.category}
         </Badge>
         <h4 className="h4 mb-1">{project.name}</h4>
-        <p className="text-muted-foreground text-lg">{project.description}</p>
+        <p className="text-muted-foreground text-md">{project.description}</p>
       </div>
     </Card>
   );
